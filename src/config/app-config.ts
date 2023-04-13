@@ -5,7 +5,7 @@ export const POSTS_URL = `https://strapi-demo-api-ogjp.onrender.com/api/posts?po
 export const POSTS_URL_FILTER = `https://strapi-demo-api-ogjp.onrender.com/api/posts?populate=*&filters[id][$in][0]=1`;
 
 export const SITE_NAME = 'FELIPE LACERDA';
-export const SITE_URL = process.env.SITE_URL || 'http://127.0.0.1:3000';
+export const SITE_URL = 'https://64386c3d7f9ffd213def48e4--effortless-pika-6db935.netlify.app';
 
 /*
 
