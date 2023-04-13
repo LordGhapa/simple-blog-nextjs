@@ -17,3 +17,4 @@ export const Container = styled.footer`
     font-size: 15rem;
   }
 `;
+export default Container;

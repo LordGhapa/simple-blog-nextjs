@@ -1,3 +1,4 @@
+import { Container } from './styled';
 export default function erro404() {
   return (
     <Container>
@@ -5,4 +6,3 @@ export default function erro404() {
     </Container>
   );
 }
-import { Container } from './styled';
