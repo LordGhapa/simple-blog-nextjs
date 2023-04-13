@@ -5,6 +5,7 @@ import { Header } from '../../components/Header';
 import { MainContainer } from '../../components/MainContainer';
 import { PostCard } from '../../components/PostCard';
 import { Footer } from '../../components/Footer';
+import Head from 'next/head';
 
 export interface HomePageProps {
   posts: PostData[];

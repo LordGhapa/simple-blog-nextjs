@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Head>
           <title>Blog exemple</title>
           <meta property="og:title" content="Blog exemple" key="title" />
+          <meta name="description" content="exemplo de um blog de criado com next" />
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>

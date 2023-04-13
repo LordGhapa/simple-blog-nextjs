@@ -1,11 +1,9 @@
-export const API_URL = `https://strapi-demo-api-ogjp.onrender.com`;
-
 export const POSTS_URL = `https://strapi-demo-api-ogjp.onrender.com/api/posts?populate=*&sort=id:desc`;
-
-export const POSTS_URL_FILTER = `https://strapi-demo-api-ogjp.onrender.com/api/posts?populate=*&filters[id][$in][0]=1`;
-
 export const SITE_NAME = 'FELIPE LACERDA';
 export const SITE_URL = 'https://64386c3d7f9ffd213def48e4--effortless-pika-6db935.netlify.app';
+
+//export const API_URL = `https://strapi-demo-api-ogjp.onrender.com`;
+//export const POSTS_URL_FILTER = `https://strapi-demo-api-ogjp.onrender.com/api/posts?populate=*&filters[id][$in][0]=1`;
 
 /*
 
@@ -40,5 +38,8 @@ elementos por pagina
 // limite por pagina
 
 pagination[start]=0&pagination[limit]=10
+
+importante para deploy na netlify
+NETLIFY_NEXT_PLUGIN_SKIP como o valor: true
 
 */

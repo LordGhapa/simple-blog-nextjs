@@ -9,10 +9,19 @@ import { PostCover } from '../../components/PostCover';
 import { PostContent } from '../../components/PostContent';
 import { PostDetails } from '../../components/PostDetails';
 import { Comments } from '../../Comments';
+import Head from 'next/head';
+import { SITE_NAME } from '../../config/app-config';
+import { removeHTML } from '../../utils/Remove-html';
 
 export function Post({ post, content }: DynamicPostProps) {
   return (
     <>
+      <Head>
+        <title>
+          {post.attributes.title}- {SITE_NAME}
+        </title>
+        <meta name="description" content={removeHTML(content).slice(0, 150)} />
+      </Head>
       <Header />
       <MainContainer>
         <Link href={'/'}>INICIO</Link>
