@@ -1,0 +1,84 @@
+<div id="wrapper">
+  <div class="container body-content">
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+    <p>
+      Conteúdo do corpo do documento!
+    </p>
+  </div>
+  <footer id="rodape">
+    <p>&copy; Tudo o que quiser colocar aqui</p>
+  </footer>
+</div>
+
+
+
+
+html, body {
+margin: 0;
+padding: 0;
+height: 99%;
+  max-height: 100%;
+  color:black;
+
+}
+#wrapper{
+min-height: 100%;
+position: relative;
+  background: #ffab32
+}
+
+div.body-content{
+  /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
+
+  background: #ffab92
+}
+footer{
+background: #ffab62;
+width: 100%;
+height: 50px;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+
+
+blog-example-4
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://blog-example-4.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
