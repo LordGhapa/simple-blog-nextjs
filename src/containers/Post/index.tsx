@@ -17,9 +17,7 @@ export function Post({ post, content }: DynamicPostProps) {
   return (
     <>
       <Head>
-        <title>
-          {post.attributes.title}- {SITE_NAME}
-        </title>
+        <title>{`${post.attributes.title}-${SITE_NAME}`}</title>
         <meta name="description" content={removeHTML(content).slice(0, 150)} />
       </Head>
       <Header />

@@ -13,4 +13,10 @@ export const Container = styled.footer`
   position: absolute;
   border: 0;
   width: 100%;
+
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;

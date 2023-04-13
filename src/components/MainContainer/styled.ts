@@ -5,7 +5,7 @@ export const Container = styled.main`
   max-width: 96rem;
   font-size: ${theme.font.sizes.medium};
   margin: 0 auto;
-  padding-block: ${theme.spacings.small};
+  padding-block: ${theme.spacings.large};
   background-color: white;
   pre {
     display: block;

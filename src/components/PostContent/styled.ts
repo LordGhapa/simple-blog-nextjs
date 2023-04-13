@@ -3,6 +3,7 @@ import { theme } from '../../styles/theme';
 export const Container = styled.article`
   padding-bottom: 4rem;
   padding-inline: ${theme.spacings.small};
+  font-size: 2rem;
   img {
     width: 100%;
   }

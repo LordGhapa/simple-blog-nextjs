@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-title-in-document-head */
+import { GlobalStyle } from '../styles/global-style';
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -40,6 +41,7 @@ export default class MyDocument extends Document {
         <Head />
         <body>
           <Main />
+          <GlobalStyle />
           <NextScript />
         </body>
       </Html>
