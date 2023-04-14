@@ -16,3 +16,11 @@ export const Container = styled.div`
     scale: 0.98;
   }
 `;
+
+export const Categorie = styled.div`
+  font-weight: bold;
+  padding-block: ${theme.spacings.small};
+  text-align: center;
+  font-size: ${theme.font.sizes.large};
+  text-transform: capitalize;
+`;

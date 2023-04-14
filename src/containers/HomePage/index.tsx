@@ -1,5 +1,5 @@
 import { PostData } from '../../domain/posts/post';
-import { Container } from './styled';
+import { Container, Categorie } from './styled';
 
 import { Header } from '../../components/Header';
 import { MainContainer } from '../../components/MainContainer';
@@ -8,12 +8,14 @@ import { Footer } from '../../components/Footer';
 
 export interface HomePageProps {
   posts: PostData[];
+  categorie?: string;
 }
-export default function HomePage({ posts }: HomePageProps) {
+export default function HomePage({ posts, categorie }: HomePageProps) {
   return (
     <>
       <Header />
       <MainContainer>
+        {categorie && <Categorie>Categoria: {categorie}</Categorie>}
         <Container>
           {posts.map((post) => (
             <PostCard
