@@ -1,9 +1,11 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
+  "/404": "pages/404.html",
+  "/404/styled": "pages/404/styled.html",
+  "/post/styled": "pages/post/styled.html",
+  "/_error": "pages/_error.js",
+  "/post/[slug]": "pages/post/[slug].js",
   "/": "pages/index.js",
-  "/categories/[categorie]": "pages/categories/[categorie].js",
-  "/post/[slug]": "pages/post/[slug].js"
+  "/categories/[categorie]": "pages/categories/[categorie].js"
 }
