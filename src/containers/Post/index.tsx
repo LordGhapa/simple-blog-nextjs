@@ -8,7 +8,7 @@ import { Heading } from '../../components/Heading';
 import { PostCover } from '../../components/PostCover';
 import { PostContent } from '../../components/PostContent';
 import { PostDetails } from '../../components/PostDetails';
-import { Comments } from '../../Comments';
+import { Comments } from '../../components/Comments';
 import Head from 'next/head';
 import { SITE_NAME } from '../../config/app-config';
 import { removeHTML } from '../../utils/Remove-html';
