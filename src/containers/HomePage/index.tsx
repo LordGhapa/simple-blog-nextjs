@@ -5,6 +5,8 @@ import { Header } from '../../components/Header';
 import { MainContainer } from '../../components/MainContainer';
 import { PostCard } from '../../components/PostCard';
 import { Footer } from '../../components/Footer';
+import { SITE_NAME } from '../../config/app-config';
+import Head from 'next/head';
 
 export interface HomePageProps {
   posts: PostData[];
@@ -13,6 +15,9 @@ export interface HomePageProps {
 export default function HomePage({ posts, categorie }: HomePageProps) {
   return (
     <>
+      <Head>
+        <title>{categorie ? `${categorie} - ${SITE_NAME}` : 'Blog exemple'}</title>
+      </Head>
       <Header />
       <MainContainer>
         {categorie && <Categorie>Categoria: {categorie}</Categorie>}
