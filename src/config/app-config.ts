@@ -1,6 +1,6 @@
 export const POSTS_URL = `https://strapi-demo-api-ogjp.onrender.com/api/posts?populate=*&sort=id:desc`;
 export const CATEGORY_URL = `https://strapi-demo-api-ogjp.onrender.com/api/categories?populate=*&sort=id:desc`;
-export const SITE_NAME = 'FELIPE LACERDA';
+export const SITE_NAME = 'blog example - Felipe Lacerda';
 export const SITE_URL = 'https://exemple-blog-felipe.netlify.app';
 
 //export const API_URL = `https://strapi-demo-api-ogjp.onrender.com`;
@@ -38,7 +38,7 @@ elementos por pagina
 
 // limite por pagina
 
-pagination[start]=0&pagination[limit]=10
+pagination[start]=0&pagination[limit]=6
 
 importante para deploy na netlify
 NETLIFY_NEXT_PLUGIN_SKIP como o valor: true

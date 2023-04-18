@@ -1,8 +1,8 @@
 import { Container } from './styled';
-export default function erro404() {
+export default function Erro404({ msg = 'Pagina não Encontrada' }) {
   return (
     <Container>
-      <p>Pagina não encontrada</p>
+      <p>{msg}</p>
     </Container>
   );
 }

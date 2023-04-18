@@ -13,7 +13,7 @@ export default function Home({ posts }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts('pagination[start]=0&pagination[limit]=6');
 
   return {
     props: {

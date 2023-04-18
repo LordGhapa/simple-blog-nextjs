@@ -14,7 +14,7 @@ export const Container = styled.footer`
 
   p {
     font-weight: bold;
-    font-size: 15rem;
+    font-size: 10vw;
   }
 `;
 export default Container;

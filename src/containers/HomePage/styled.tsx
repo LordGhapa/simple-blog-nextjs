@@ -24,3 +24,6 @@ export const Categorie = styled.div`
   font-size: ${theme.font.sizes.large};
   text-transform: capitalize;
 `;
+export const AllPostsLink = styled.div`
+  text-align: center;
+`;
