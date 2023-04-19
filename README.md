@@ -1,17 +1,53 @@
-# Example app with styled-components using babel
-This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
-## Preview
-Preview the example live on [StackBlitz](http://stackblitz.com/):
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-styled-components-babel)
-## Deploy your own
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components-babel&project-name=with-styled-components-babel&repository-name=with-styled-components-babel)
-## How to use
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+<h1 align="center"> blog com next js </h1>
 
+## Para Iniciar
 ```bash
-npx create-next-app . -e https://github.com/LordGhapa/nextjs-exemple-ts-styled-components
+npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Abra [http://localhost:3000](http://localhost:3000) com o navegador e veja o resultado
+![image](https://user-images.githubusercontent.com/99082399/232528755-521909a9-edcc-4fe0-bb24-f86b5d0b31c8.png)
+![image](https://user-images.githubusercontent.com/99082399/232529052-36d0347c-c945-4ed8-a91c-812bd2027fbc.png)
+
+
+
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
+
+<br>
+
+
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML e CSS
+- JavaScript
+- Nextjs
+- Style Components
+- Strapi para o back end
+
+
+## 💻 Projeto
+
+um pequeno blog criado usando next js, pegando informaçoes de uma api gerando paginas estáticas sempre que tiver alguma mudança na api sera feito novamente a build da pagina
+
+- [Acesse o projeto finalizado, online](https://exemple-blog-felipe.netlify.app/)
+
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT.
+
+---
+
+Feito por Felipe Lacerda :wave: [Linkedin!](https://www.linkedin.com/in/felipe-lacerda-oliveira-274554125/)
