@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { PostCard, PostCardProps } from '.';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -10,7 +11,7 @@ export default {
     cover: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
   },
 } as Meta;
-export const PostCardBook: StoryObj<PostCardProps> = (args) => (
+export const PostCards = (args) => (
   <div style={{ maxWidth: '36rem' }}>
     <PostCard {...args} />;
   </div>
