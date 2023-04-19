@@ -20,7 +20,7 @@ export async function getPost(slug: string | string[]): Promise<GetPost> {
 
     return jsonPosts;
   } catch (error) {
-    console.error('Erro no Fetch getAllPosts', error);
+    console.error('Erro no Fetch getPost', error);
     return [];
   }
 }

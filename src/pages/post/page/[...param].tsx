@@ -26,9 +26,9 @@ export default function Page({ posts, category, pagination }: PageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = Number(await countAllPosts());
   const postPerPage = 6;
-  const qtrPages = Math.ceil(numberOfPosts / postPerPage);
+  const qtdPages = Math.ceil(numberOfPosts / postPerPage);
   const querys: any[] = [];
-  for (let i = 1; i <= qtrPages; i++) {
+  for (let i = 1; i <= qtdPages; i++) {
     querys.push({
       params: { param: [`${i}`] },
     });
@@ -43,9 +43,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     );
 
     for (let i = 1; i <= numberOfPostsInCategory; i++) {
-      const qtrPagesInCategories = Math.ceil(i / postPerPage);
+      const qtdPagesInCategories = Math.ceil(i / postPerPage);
       querys.push({
-        params: { param: [`${qtrPagesInCategories}`, category] },
+        params: { param: [`${qtdPagesInCategories}`, category] },
       });
     }
   }
@@ -54,10 +54,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   /*   return {
     paths: [
       {
-        params: { param: ['1', 'ruby'] },
+        params: { param: ['123...'] },
       },
       {
-        params: { param: ['2', 'ruby'] },
+        params: { param: ['123...', 'ruby'] },
+      },
+      {
+        params: { param: ['123...', 'java'] },
       },
     ],
     fallback: true,

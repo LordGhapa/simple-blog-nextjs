@@ -12,7 +12,7 @@ export async function countAllPosts(query?): Promise<string> {
     const numberOfPosts = await post.meta.pagination.total;
     return numberOfPosts;
   } catch (error) {
-    console.error('Erro no Fetch getAllPosts', error);
+    console.error('Erro no Fetch countAllPosts', error);
     return [];
   }
 }

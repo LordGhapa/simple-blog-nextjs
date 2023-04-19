@@ -12,7 +12,7 @@ export async function getAllCategory(query?): Promise<CategoryData[]> {
     const content = post.data;
     return content;
   } catch (error) {
-    console.error('Erro no Fetch getAllPosts', error);
+    console.error('Erro no Fetch getAllCategory', error);
     return [];
   }
 }
