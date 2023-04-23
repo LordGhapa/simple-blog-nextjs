@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { PostData } from '../../../domain/posts/post';
 import HomePage from '../../../containers/HomePage';
@@ -8,6 +7,7 @@ import Erro404 from '../../404';
 import { countAllPosts } from '../../../data/posts/count-All-Posts';
 import { PaginationData } from '../../../domain/posts/paginations';
 import { getAllCategory } from '../../../data/posts/get-all-category';
+import { CategoryData } from '../../../domain/posts/category';
 
 interface PageProps {
   posts: PostData[];
@@ -15,6 +15,9 @@ interface PageProps {
   pagination: PaginationData;
 }
 
+interface QueryProps {
+  params: { param: string[] };
+}
 export default function Page({ posts, category, pagination }: PageProps) {
   const router = useRouter();
   if (router.isFallback) return <Erro404 msg={'Carregando'} />;
@@ -27,15 +30,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = Number(await countAllPosts());
   const postPerPage = 6;
   const qtdPages = Math.ceil(numberOfPosts / postPerPage);
-  const querys: any[] = [];
+  const querys: QueryProps[] = [];
   for (let i = 1; i <= qtdPages; i++) {
     querys.push({
       params: { param: [`${i}`] },
     });
   }
   //// nao mexe para cima ainda
-  let categorias: any[] = await getAllCategory();
-  categorias = categorias.map((r) => r.attributes.name);
+  let categorias: CategoryData[] | string[] = await getAllCategory();
+  categorias = categorias.map((r) => r.attributes?.name);
 
   for (const category of categorias) {
     const numberOfPostsInCategory = Number(
