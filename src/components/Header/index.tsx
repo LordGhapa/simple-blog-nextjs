@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { Container } from './styled';
 import { SITE_NAME } from '../../config/app-config';
 
-import { useEffect } from 'react';
-
 export const Header = ({ categorias = ['erro'] }) => {
   return (
     <Container>
