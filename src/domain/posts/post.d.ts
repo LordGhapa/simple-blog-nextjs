@@ -74,4 +74,5 @@ interface FormatImg {
 export interface DynamicPostProps {
   post: PostData;
   content: string;
+  categoryName?: string[];
 }

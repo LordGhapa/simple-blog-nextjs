@@ -8,22 +8,32 @@ import { countAllPosts } from '../../../data/posts/count-All-Posts';
 import { PaginationData } from '../../../domain/posts/paginations';
 import { getAllCategory } from '../../../data/posts/get-all-category';
 import { CategoryData } from '../../../domain/posts/category';
+import categoryNames from '../../../data/posts/get-Category-Names';
 
 interface PageProps {
   posts: PostData[];
   category?: string;
   pagination: PaginationData;
+  categoryName?: string[];
 }
 
 interface QueryProps {
   params: { param: string[] };
+  categoryName?: string[];
 }
-export default function Page({ posts, category, pagination }: PageProps) {
+export default function Page({ posts, category, pagination, categoryName }: PageProps) {
   const router = useRouter();
   if (router.isFallback) return <Erro404 msg={'Carregando'} />;
 
   if (!posts.length) return <Erro404 />;
-  return <HomePage posts={posts} categorie={category} pagination={pagination} />;
+  return (
+    <HomePage
+      posts={posts}
+      categorie={category}
+      pagination={pagination}
+      categoryName={categoryName}
+    />
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -53,7 +63,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   }
 
-  console.log('static path', querys);
+  // console.log('static path', querys);
   /*   return {
     paths: [
       {
@@ -87,6 +97,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const urlQuery = `pagination[page]=${page}&pagination[pageSize]=${postsPerPage}${categoryQuery}`;
   const numberOfPosts = Number(await countAllPosts(categoryQuery));
   const posts = await getAllPosts(urlQuery);
+  const categoryName = await categoryNames();
+
   const pagination: PaginationData = {
     nextPage,
     numberOfPosts,
@@ -99,6 +111,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       posts,
       pagination,
       category,
+      categoryName,
     },
   };
 };

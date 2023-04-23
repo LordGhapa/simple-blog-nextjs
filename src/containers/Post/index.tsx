@@ -13,16 +13,16 @@ import Head from 'next/head';
 import { SITE_NAME } from '../../config/app-config';
 import { removeHTML } from '../../utils/Remove-html';
 
-export function Post({ post, content }: DynamicPostProps) {
+export function Post({ post, content, categoryName }: DynamicPostProps) {
   return (
     <>
       <Head>
         <title>{`${post.attributes.title}-${SITE_NAME}`}</title>
         <meta name="description" content={removeHTML(content).slice(0, 150)} />
       </Head>
-      <Header />
+      <Header categorias={categoryName} />
       <MainContainer>
-        <Link href={'/'}>INICIO</Link>
+        <Link href="javascript:history.back()">Voltar</Link>
         <Heading>{post.attributes.title}</Heading>
         <PostCover
           coverUrl={post.attributes.cover.data.attributes.formats.small.url}

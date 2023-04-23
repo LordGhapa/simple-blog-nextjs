@@ -7,9 +7,10 @@ import { DynamicPostProps } from '../../domain/posts/post';
 import { MarkdownToHtml } from '../../utils/markdown-to-html';
 
 import { Post } from '../../containers/Post';
+import categoryNames from '../../data/posts/get-Category-Names';
 
-export default function DynamicPost({ post, content }: DynamicPostProps) {
-  return <Post post={post} content={content} />;
+export default function DynamicPost({ post, content, categoryName }: DynamicPostProps) {
+  return <Post post={post} content={content} categoryName={categoryName} />;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -32,11 +33,13 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   const post = data.data[0];
   const content = await MarkdownToHtml(post.attributes.content);
+  const categoryName = await categoryNames();
 
   return {
     props: {
       post,
       content,
+      categoryName,
     },
   };
 };

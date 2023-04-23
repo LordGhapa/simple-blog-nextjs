@@ -15,8 +15,9 @@ export interface HomePageProps {
   posts: PostData[];
   categorie?: string;
   pagination?: PaginationData;
+  categoryName: string[];
 }
-export default function HomePage({ posts, categorie, pagination }: HomePageProps) {
+export default function HomePage({ posts, categorie, pagination, categoryName }: HomePageProps) {
   const title = `${categorie ? `${categorie} - ` : ''} ${SITE_NAME} ${
     pagination?.nextPage ? `- Pagína ${pagination.nextPage - 1}` : ''
   }`;
@@ -25,8 +26,10 @@ export default function HomePage({ posts, categorie, pagination }: HomePageProps
       <Head>
         <title>{title}</title>
       </Head>
-      <Header />
+      <Header categorias={categoryName} />
+
       <MainContainer>
+        {categorie && <Link href="javascript:history.back()">Voltar</Link>}
         {categorie && <Categorie>Categoria: {categorie}</Categorie>}
         <Container>
           {posts.map((post) => (
