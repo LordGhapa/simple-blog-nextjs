@@ -6,7 +6,7 @@ import { Container } from './styled';
 export const Footer = () => {
   return (
     <Container>
-      <Link href="/">Feito por {SITE_NAME}</Link>
+      <Link href="/">Feito por Felipe Lacerda</Link>
     </Container>
   );
 };
